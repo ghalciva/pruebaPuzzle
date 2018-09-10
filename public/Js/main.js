@@ -1,3 +1,49 @@
+class Usuario{
+    constructor(obj){
+        this.user=obj.user;
+        this.pass=obj.pass;
+        this.puntaje=obj.puntaje;
+        var arrRompecabezas=[];
+        obj.rompecabeza.forEach( function(rompecbz){
+            arrRompecabezas.push(new Rompecabeza(rompecbz.piezas, rompecbz.espacios));
+        });
+        this.rompecabeza=arrRompecabezas;
+    }
+}
+
+class Rompecabeza{
+    constructor(piezas,espacios){
+        var arrPiezas=[];
+        piezas.forEach( function(pieza){
+            arrPiezas.push(new Piezas(pieza.id, pieza.posx,pieza.posy,pieza.url));
+        });
+        this.piezas=arrPiezas;
+                       
+        var arrEspacios=[];
+        espacios.forEach( function(espacio){
+            arrEspacios.push(new Espacios(espacio.id, espacio.posx,espacio.posy,espacio.url));
+        });               
+        this.espacios=arrEspacios;
+    }
+    
+}
+class Piezas {
+    constructor(id, posx, posy, url){
+        this.id = id;
+        this.posx = posx;
+        this.posy = posy;
+        this.url = url;
+    }
+}
+class Espacios {
+    constructor(id, posx, posy, url){
+        this.id = id;
+        this.posx = posx;
+        this.posy = posy;
+        this.url = url;
+    }
+}
+
 !function(a){
     function f(a,b){
         if(!(a.originalEvent.touches.length>1)){
@@ -41,10 +87,9 @@ function start_puzzle(x){
 }
 
 $(function(){
-    //default
-    //var num=3;
+    var num = 2;
     $('#pile').height($('#source_image').height());
-    start_puzzle(3);
+    start_puzzle(num);
 
     $('.restart-puzzle').click(function(){
         $('#source_image').snapPuzzle('destroy');

@@ -1,4 +1,20 @@
+<script >
+       
+        var usuario = localStorage.getItem("usuario");
+        
+        if(usuario==null || usuario==undefined){
+             console.log(usuario);
+              window.location="/user/login"
+             //window.location="/user/login"
+        }
+        
+      
+    
+
+
+</script>
 <h2>Editar - <a href="/user"> Administrador </a></h2>
+
 
 <!-- NOTA: utilice helper para simplificar el código de esta sección 
 agregar method-override 
@@ -15,8 +31,10 @@ agregar method-override
 </form>
 
 <br><br><br>
-    <div class="row pt-md-5"></div>
+     <div class="row pt-md-5"></div>
     <div class="row">
-        <a href="/user" type="button" style="color:white;">Atrás</a>
+        <a href="/about" type="button" style="color:white;">Atrás</a>
     </div>
+  <br><br>
+
   

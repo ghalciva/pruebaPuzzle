@@ -1,22 +1,43 @@
+<script >
+       
+        var usuario = localStorage.getItem("usuario");
+        
+        if(usuario==null || usuario==undefined){
+             console.log(usuario);
+              window.location="/user/login"
+             //window.location="/user/login"
+        }
+        
+      
+    
+
+
+</script>
 <!-- NOTA: utilice helper para simplificar el código de esta sección -->
 
-<h2><a href="/user">Administrador</a></h2>
+<h2><a href="/user">Imagenes</a></h2>
 
 <form class="form" action="/user" method="post">
   <div class="form-group">
     <label for="title"></label>
-    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="enter username"> 
-      <input type="password" class="form-control" id="password" name="password" placeholder="enter a password"> 
-      <div class ="form-group"></div>
-      <input type="text" class="form-control" id="rol" name="rol" placeholder="rol"> 
+      
+      <div>
+      <label>Subir Imagen</label>
+      </div>
+   
+      <div class ="form-group" id="foto">
+    
+      
+      </div>
+    
     </div>
-  <button type="submit" class="btn btn-default success">Crear</button>
+  <button type="submit" class="btn btn-default success">IamgenUser</button>
     
     
 </form>
 <br><br><br>
     <div class="row pt-md-5"></div>
     <div class="row">
-        <a href="/user" type="button" style="color:white;">Atrás</a>
+        <a href="/user" type="button">Atrás</a>
     </div>
   

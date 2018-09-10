@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rompecabezas</title>
+    
+ <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/estilo.css">
+   <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="Shortcut Icon" href="/images/puzzle-icon.ico" />
+</head>
+    
+    
+<body cz-shortcut-listes="true">
+        <div id="title">
+        <img src="/images/rompecabezasTitle.png" class="img-fluid">
+        </div> 
+             
+        <div class="row" style="text-align: center">
+            <div class="col-md-12">
+                <form style="text-align:center; display:block;">
+                    <strong> <label style="font-size: 21px; color: white;"> Subir Imagen: &nbsp;</label>
+                        <input type="file" id="imgURL"> <br> <br> </strong> 
+                    <div id="contentImg"> </div>
+                </form> <br>
+                <strong> <label style="font-size: 26px; color: white;"> Seleccione el tamaño:</label></strong>
+                <br>
+                <a href="#"> 
+                    <button id="game-button" style="background-color:#FFC300" class="dos"><strong>2x2</strong>
+                    </button> 
+                </a> 
+                <a href="#"> 
+                    <button id="game-button" style="background-color:#FFC300" class="tres"><strong> 3x3 </strong>
+                    </button> 
+                </a> 
+                <a href="#"> 
+                    <button id="game-button" style="background-color:#FFC300" class="cuatro"> <strong>4x4</strong>
+                    </button> 
+                </a> 
+            </div>
+        </div>
+        <div class="row" style="text-align: center">
+            <div class="col-md-12">
+                <button id="game-button" style="background-color:lightblue;color:blue" class="crearPuzzle">Crear Rompecabezas </button>  
+            </div>
+        </div> 
+        <div class="row" style="text-align: center">
+            <div class="col-md-12">
+                <a href="/front/administradorP"> <button id="game-button">Regresar</button> </a> 
+            </div>
+        </div>    
+        <script src="/Js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="/Js/scriptindex.js"></script>  
+    </body>

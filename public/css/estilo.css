@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Gaegu:400,700|Kranky|Source+Sans+Pro|Short+Stack|Gaegu|Dokdo|Luckiest+Guy');
-
 body { 
     background-image: url(/images/wallpaper.png);
     background-position: center center;
@@ -7,11 +5,24 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+#content{
+    text-align: center;
+    margin-top: 27% ;
+}
+#content2{
+    text-align: center;
+    margin-top: 20% ;
+}
+#content3{
+    margin-top: 33% ;
+    color: black;
+}
+#contentImg{
+    text-align: center;
+}
 body.juego { 
     margin-top: 10%;
-}
-body.inicio { 
-    margin-top: 12%;
+    text-align: center;
 }
 p, td {
     line-height: 1.5; 
@@ -43,16 +54,24 @@ td:first-child {
     font-size: 105%;
     text-decoration: none;
 }
-h1, h2, h3 { 
-    color: #4b4b4b; 
-    font-family: "Source Sans Pro", sans-serif; 
-    font-weight: 300; 
-    margin: 0 0 1.2em; 
+.btnIr{
+    background-color: steelblue;
+    display: inline-block;
+    border-radius: 3em;
+    text-decoration: none;
+    padding: 0.9em 3em;
+    margin: 0 0.4em 1em 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
-h1 { 
-    font-size: 4.5em; 
-    color: #1f8dd6; 
-    margin: 0 0 .4em; 
+a.texto{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    color: midnightblue;
+    font-family: 'Roboto', sans-serif;
 }
 h2 { 
     font-size: 2em; 
@@ -94,8 +113,6 @@ p{
 #title{
     color: orange; 
     font-family: 'Luckiest Guy', cursive;
-    font-size: 90px; 
-    text-align: center;
 }
 a.btnRestart{
     background-color:brown;
@@ -130,133 +147,9 @@ a.btnRestart{
     max-height: 300px;
     max-width: 300px;
 }
-
-#game-button { 
-    background-color:#3369ff;
-    display:inline-block;
-    box-shadow:inset 0 -0.8em 0 -0.50em rgba(0,0,0,0.17);
-    border-radius:3em;
-    box-sizing: border-box;
-    padding:0.2em 2em;
-    margin: 4%;
-    text-align:center;
-    color: white;
-    font-family: 'Gaegu', cursive;
-    font-size: 26px;
-    position:relative; 
-    max-height:200px ;
-    max-width:300px;
-    text-align: center;
-}
-#avatar-container{
-    text-align: center;
-    display: block; 
-    margin: 0 auto;
-    max-width: 100%;
-    width: 80%;
-    margin-top: 5%;
-}
-
-#arrows {
-    background-color: transparent;
-    border: solid 0;
-    padding: 3%;    
-}
-
 #atrasBtn{
     float: left;
     margin-left: 10%;
-}
-.regresar{
-    position: relative;
-    padding: 350px 0 250px 0;
-    float: right;
-    font-family: 'Gaegu', cursive;
-    font-size: 200%;
-}
-
-.intro{
-    padding: 50% 5px;
-}
-
-h3{
-    color: dimgray;
-    font-size: 40px;
-}
-
-
-.fondo{
-    width: 640px; 
-    height: 407px;
-    position: fixed;
-    float: right;
-    opacity: 0.2;
-}
-.day {
-    border: 5px dashed transparent;
-    background: #ddd;
-    position: relative;
-}
-.day.hovering {
-    background: #b6d6fb;
-    border-color: #276cbc;
-}
-
-#game-button-back { 
-    background-color:green;
-    display:inline-block;
-    box-shadow:inset 0 -0.7em 0 -0.40em rgba(0,0,0,0.17);
-    border-radius:3em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    text-transform:uppercase;
-    font-weight:400;
-    color: white;
-    text-align:center; 
-    padding:10px;
-    width: 23%;
-    margin-left: 40%;
-    margin-top: 5%;
-}
-
-
-
-
-
-
-a:link 
-{ 
-text-decoration:none; 
-}
-
-
-
-#e1 {
-width : 40px;
-height : 40px;
-background : black;
-position: absolute;
-z-index: 1000;
-}
-
-#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9 {
-width : 40px;
-height : 40px;
-border-style: dotted;
-position: absolute;
-}
-
-.container-fluid{
-margin: auto;
-display: block;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-height: 735px;
-    overflow: hidden;
-    overflow-y: hidden;
-
 }
 
 @media (max-width:480px) {

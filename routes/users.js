@@ -6,7 +6,66 @@ var router = express.Router();
 //https://www.youtube.com/watch?v=WYa47JkZH_U
 //https://knexjs.org/
 const knex = require('../db/knex');
+//Login
 
+//funcion que ejecuta el request para obtener el usuario ya logeado
+
+
+router.get('/login/:id', (req, res)=>{
+
+  const id = req.params.id;
+    console.log(id)
+  knex('Administrador')
+      .where('id_administrador', id)
+      .first()
+      .then((user) => {
+        if(user!=undefined) {
+          console.log(user)
+          //res.redirect(/usuarios);
+          res.json({user:user})
+          //res.render(login/sesion, {user:user})
+        }else {
+          //res.redirect("/login");
+        }
+      });
+
+});
+
+//funcion para redireccionar al formulario de logeo
+router.get('/login', (req, res) => {
+         
+      res.render('user/login');
+   
+});
+
+
+router.post('/auth', (req, res) => {  
+ const usuario=req.body.usuario;
+ const password=req.body.password;
+   console.log("prueba",usuario); 
+  knex('Administrador')
+  .where({ usuario: usuario })
+  .select('password')
+  .select('id_administrador')  
+  .then(function(result) {
+    if (!result || !result[0])  {  // not found!
+      console.log("Invalido user"); 
+      return;
+    }
+    var pass = result[0].password;
+    if (password === pass) {
+        var user= result[0].id_administrador;
+        console.log("usuario", user);
+        
+      res.render('user/prueba', {user: user});
+    } else {
+      console.log("Vale Verga Frada"); 
+    }
+  })
+  .catch(function(error) {
+    console.log(error);
+});
+});
 
 //routing read database postgrsql
 router.get('/', (req, res) => {
@@ -133,4 +192,20 @@ router.delete('/:id_administrador',(req,res)=>{
 });
 
 
+
+
+/*
+router.post('/login/:usuario:password', (req, res) => {
+    const usu=req.params.usuario;
+     const pass=req.params.password;
+    
+  knex('Administrador')
+    .select()
+    .where('usuario, password',usuario, password)
+    .then(usuarios =>{
+      res.render('/user/login', { title: "Usuarios", objUsuarios: usuarios });
+  });  
+});
+
+*/
 module.exports = router;
