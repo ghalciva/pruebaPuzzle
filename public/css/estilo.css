@@ -21,7 +21,7 @@ body {
     text-align: center;
 }
 body.juego { 
-    margin-top: 8%;
+    margin-top: auto;
     text-align: center;
 }
 p, td {
