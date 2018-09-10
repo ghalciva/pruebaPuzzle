@@ -1,0 +1,24 @@
+<h2>Editar - <a href="/partida"> Partida </a></h2>
+
+<!-- NOTA: utilice helper para simplificar el código de esta sección 
+agregar method-override 
+-->
+
+<form class="form" action="/partida/{{user.id_partida}}?_method=PUT" method="post">
+  <div class="form-group">
+    <label for="title"></label>      
+      <input type="text" class="form-control" id="puntaje" name="puntaje" value="{{user.puntaje}}"> 
+      <input type="text" class="form-control" id="piezas" name="piezas" value="{{user.piezas}}"> 
+      <input type="text" class="form-control" id="intentos" name="intentos" value="{{user.intentos}}"> 
+      <input type="text" class="form-control" id="usuarios_id" name="usuarios_id" value="{{user.usuarios_id}}"> 
+      <input type="text" class="form-control" id="rompecabeza_id" name="rompecabeza_id" value="{{user.rompecabeza_id}}">      
+  </div>
+  <button type="submit" class="btn btn-default btn-danger">Actualizar</button>
+</form>
+
+<br><br><br>
+    <div class="row pt-md-5"></div>
+    <div class="row">
+        <a href="/partida" type="button" style="color:white;">Atrás</a>
+    </div>
+  
